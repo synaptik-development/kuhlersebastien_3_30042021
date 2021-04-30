@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logo{
+    width: 20rem;
+}
+
+header i{
+    position: absolute;
+    left: 0.5rem;
+    align-self: center;
+}
+
