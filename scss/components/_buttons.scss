@@ -1,0 +1,18 @@
+.btn {
+    display: block;
+    color: white;
+    background-image: radial-gradient(lighten($color-primary, 10%), $color-primary);
+    border-radius: $border;
+    border: none;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @include box-shadow;
+    @include margin;
+}
+
+
+
+
+

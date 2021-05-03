@@ -1,5 +1,18 @@
-body{
-    margin-left: 5px;
-    margin-right: 5px;
+*{
+    list-style-type: none;
 }
+
+body{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+}
+
+
 

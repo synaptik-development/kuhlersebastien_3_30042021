@@ -1,3 +1,10 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$lighten-10: lighten($color-tertiary, 10%);
+$lighten-20: lighten($color-tertiary, 20%);
+$border: 15rem;
+$padding: 1rem;
+
+
+

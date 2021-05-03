@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f3c017abfb.js" crossorigin="anonymous"></script>
@@ -11,88 +11,91 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="/img/ohmyfood.png" alt="logo ohmyfood">
+        <img class="logo" src="./img/ohmyfood.png" alt="logo ohmyfood"/>
     </header>
 
     <nav>
-        <div>
+        <div class="nav__location">
             <i class="fas fa-map-marker-alt"></i>
             Paris, Belleville
         </div>
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
-        <div class="btn">Explorez nos restaurants</div>
+        <div class="nav__caption">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
+            <button class="btn">Explorez nos restaurants</button>
+        </div>
     </nav>
 
     <main>
-        <article>
-            <h2>Fonctionnement</h2>
-            <ol>
+        <article class="main__article">
+            <ul>
                 <li>
+                    <h2>Fonctionnement</h2>
+                </li>
+                <li class="main__article__card">
+                    <p>1</p>
                     <i class="fas fa-mobile-alt"></i>
-                    Choisissez un restaurant
+                    <span>Choisissez un restaurant</span>
                 </li>
-                <li>
+                <li class="main__article__card">
+                    <p>2</p>
                     <i class="fas fa-list-ul"></i>
-                    Composez votre menu
+                    <span>Composez votre menu</span>
                 </li>
-                <li>
+                <li class="main__article__card main__article__card--modif">
+                    <p>3</p>
                     <i class="fas fa-store"></i>
-                    Dégustez au restaurant
+                    <span>Dégustez au restaurant</span>
                 </li>
-            </ol>
+            </ul>
         </article>
 
-        <section>
+        <section class="main__section">
             <h2>Restaurants</h2>
-            <figure class="card">
-                <div class="figure__picture">
-                    <img src="/img/jay-wennington.jpg" alt="plat">
-                </div>
-                <figcaption>
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="figure__picture">
-                    <img src="/img/stil.jpg" alt="plat">
-                </div>
-                <figcaption>
-                    <div>
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                    </div>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="figure__picture">
-                    <img src="/img/toa-heftiba.jpg" alt="plat">
-                </div>
-                <figcaption>
-                    <div>
-                        <h3>À la française</h3>
-                        <p>Cité rouge</p>
-                    </div>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="figure__picture">
-                    <img src="/img/louis-hansel.jpg" alt="plat">
-                </div>
-                <figcaption>
-                    <div>
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                    <i class="far fa-heart"></i>
-                </figcaption>
-            </figure>
+            <div class="main__section--cards">
+                <figure class="card">
+                    <img src="./img/jay-wennington.jpg" alt="plat"/>
+                    <span>Nouveau</span>
+                    <figcaption>
+                        <div>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./img/stil.jpg" alt="plat"/>
+                    <span>Nouveau</span>
+                    <figcaption>
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./img/toa-heftiba.jpg" alt="plat"/>
+                    <figcaption>
+                        <div>
+                            <h3>À la française</h3>
+                            <p>Cité rouge</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./img/louis-hansel.jpg" alt="plat"/>
+                    <figcaption>
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
@@ -100,7 +103,7 @@
         <ul>
             <li class="footer__logo">
                 ohmyfood
-            </li><br>
+            </li>
             <li>
                 <i class="fas fa-utensils"></i>
                 Proposer un restaurant

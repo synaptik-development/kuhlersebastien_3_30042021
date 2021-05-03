@@ -1,0 +1,40 @@
+.annex__main__figure{
+    width: fit-content;
+    margin: 0;
+}
+
+.annex__main__body{
+    background-color:$lighten-20;
+    border-radius: 2rem 2rem 0 0;
+    padding: 1rem;
+    position: relative;
+    top: -6rem;
+    margin-bottom: -6rem;
+    display: flex;
+    flex-direction: column;
+    .btn{
+        align-self: center;
+    }
+}
+
+.annex__main__title{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    i{
+        align-self: center;
+        transform: scale(1.5);
+    }
+}
+
+.annex__section__title{
+    color: darken($color-tertiary, 30%);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    .underline{
+        border-bottom: 2px solid $color-tertiary;
+        width: 45px;
+    }
+}
+

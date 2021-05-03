@@ -1,0 +1,45 @@
+.nav__location{
+    display: flex;
+    justify-content: center;
+    background-color: $lighten-10;
+    padding: $padding;
+    i{
+        margin-right: 1rem;
+    }
+}
+
+.nav__caption{
+    background-color: $lighten-20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: $padding;
+}
+
+.main__article{
+    padding: $padding;
+    ul{
+        display: flex;
+        padding-left: 0;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+.main__section{
+    padding: $padding;
+    background-color: $lighten-20;
+    figure{
+        margin-left: 0;
+        img{
+            height: 130px;
+            border-radius: 1rem 1rem 0 0;
+        }
+    }
+    &--cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+

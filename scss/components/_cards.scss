@@ -1,0 +1,14 @@
+.card{
+    @include card;
+}
+
+.annex__card{
+    @include annex__card;
+}
+
+.main__article__card{
+    @include main__article__card;
+}
+
+
+
