@@ -1,0 +1,15 @@
+/*     loading-spinner     */
+@for $i from 1 through length($spinner-width) {
+    .spinner--#{$i} {
+        width: nth($spinner-width, $i);
+        height: nth($spinner-width, $i);
+    }
+}
+
+
+/*     annex__card-move     */
+@for $i from 1 through 10{
+    .annex__card--#{$i} {
+        animation: annex__card-move 350ms 250ms*$i ease-out both;
+    }
+}

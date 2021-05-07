@@ -7,6 +7,7 @@
     box-shadow: 3px 5px 5px $lighten-10;
     }
 
+/*     cartes accueil     */
 @mixin card{
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
     }
 }
 
+/*     cartes explications     */
 @mixin main__article__card($background-color: $lighten-20, $background-modif: lighten($color-secondary, 21%), $color-modif: $color-primary){
     display: flex;
     align-items: center;
@@ -85,6 +87,8 @@
     }
 }
 
+
+/*     cartes pages annex     */
 @mixin annex__card {
     background-color: white;
     display: flex;
@@ -136,6 +140,26 @@
     }
 }
 
+/*     loading spinner     */
+@mixin spinner-style($color: transparent){
+    border-radius: 50%;
+    border: 5px solid $color;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+@mixin spinner-border-top {
+    border-top-color: $color-primary;
+    border-bottom-color: $color-primary;
+}
+
+@mixin spinner-border-left {
+    border-left-color: $color-primary;
+    border-right-color: $color-primary;
+}
+
+/*     media query     */
 @mixin media-sm{
     @media screen and (max-width: 630px) {
         @content; 

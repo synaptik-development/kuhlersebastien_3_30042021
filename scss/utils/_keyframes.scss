@@ -1,3 +1,42 @@
+/*     loader     */
+@keyframes reveal{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes wipe-off{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes center-scale{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes spinner-rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*     check annex__card     */
 @keyframes price-move{
     0%{
         transform: translateX(60px);
@@ -7,6 +46,7 @@
     }
 }
 
+/*     icon check     */
 @keyframes rotate{
     0%{
         transform: rotate(0deg);
@@ -15,3 +55,27 @@
         transform: rotate(360deg);
     }
 }
+
+/*     annex__card     */
+@keyframes annex__card-move{
+    0%{
+        transform: translateY(9999px);
+    }
+    30%{
+        transform: translateY(100px);
+    }
+    50%{
+        transform: translateY(70px);
+    }
+    65%{
+        transform: translateY(40px);
+    }
+    80%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
