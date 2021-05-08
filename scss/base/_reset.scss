@@ -12,41 +12,14 @@ a{
 
 .loader{
     animation: wipe-off 350ms $delay both;
-    .spinner{
-        @include spinner-style();
-        animation: spinner-rotate $duration both cubic-bezier(.46,.68,1,1.58) 1;
-        &--1{
-            box-shadow: 1px 1px 10px grey;
-            /*@include spinner-border-left();*/
+    .spin-xl{
+        @include loader;
+        border-right: none;
+        .spin-s{
+            @include loader(30px, 30px, dotted, 3px, 90%);
+            border-top-style: solid;
+            background-color: white;
         }
-        &--2{
-            @include spinner-border-top();
-        }
-        &--3{
-            @include spinner-border-left();
-        }
-        &--4{
-            @include spinner-border-top();
-        }
-        &--5{
-            @include spinner-border-left();
-        }
-        &--6{
-            @include spinner-border-top();
-        }
-        &--7{
-            @include spinner-border-left();
-        }
-        &--8{
-            @include spinner-border-top();
-        }
-        .center{
-            height: 20px;
-            width: 20px;
-            @include spinner-style($color-primary); 
-            animation: center-scale $duration both ease-in-out infinite;
-        }
-        
     }
 }
 

@@ -7,6 +7,18 @@
     box-shadow: 3px 5px 5px $lighten-10;
     }
 
+    /*     loader     */
+@mixin loader ($width: 200px, $height: 200px, $border-style: solid, $border-width: 4px, $left-position: 0){
+    width: $width;
+    height: $height;
+    border: $color-primary $border-style $border-width;
+    top: 0; left: $left-position; right: 0; bottom: 0;
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    animation: loader 3s ease-out 1;
+}
+
 /*     cartes accueil     */
 @mixin card{
     display: flex;
@@ -138,25 +150,6 @@
             margin-bottom: 0.5rem;
         }
     }
-}
-
-/*     loading spinner     */
-@mixin spinner-style($color: transparent){
-    border-radius: 50%;
-    border: 5px solid $color;
-    position: absolute;
-    margin: auto;
-    top: 0; bottom: 0; left: 0; right: 0;
-}
-
-@mixin spinner-border-top {
-    border-top-color: $color-primary;
-    border-bottom-color: $color-primary;
-}
-
-@mixin spinner-border-left {
-    border-left-color: $color-primary;
-    border-right-color: $color-primary;
 }
 
 /*     media query     */
