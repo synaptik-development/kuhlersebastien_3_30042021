@@ -2,6 +2,14 @@
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+    :hover{
+        cursor: pointer;
+    }
+}
+
 .loader{
     animation: wipe-off 350ms $delay both;
     .spinner{
@@ -10,35 +18,27 @@
         &--1{
             box-shadow: 1px 1px 10px grey;
             /*@include spinner-border-left();*/
-            border-top-color: $color-primary;
         }
         &--2{
-            /*@include spinner-border-top();*/
-            border-right-color: $color-primary;
+            @include spinner-border-top();
         }
         &--3{
-            /*@include spinner-border-left();*/
-            border-bottom-color: $color-primary;
+            @include spinner-border-left();
         }
         &--4{
-            /*@include spinner-border-top();*/
-            border-left-color: $color-primary;
+            @include spinner-border-top();
         }
         &--5{
-            /*@include spinner-border-left();*/
-            border-left-color: $color-primary;
+            @include spinner-border-left();
         }
         &--6{
-            /*@include spinner-border-top();*/
-            border-bottom-color: $color-primary;
+            @include spinner-border-top();
         }
         &--7{
-            /*@include spinner-border-left();*/
-            border-top-color: $color-primary;
+            @include spinner-border-left();
         }
         &--8{
-            /*@include spinner-border-top();*/
-            border-right-color: $color-primary;
+            @include spinner-border-top();
         }
         .center{
             height: 20px;
@@ -79,7 +79,7 @@ img{
         left: 0;
         color: $color-primary;
         opacity: 0;
-        &:hover{
+        &:active, &:hover{
             cursor: pointer;
             opacity: 1;
             transition: opacity 350ms;
