@@ -52,6 +52,28 @@
   }
 }
 
+/*     boutons     */
+@-webkit-keyframes btn-move {
+  0% {
+    background-color: #9356dc;
+  }
+  100% {
+    background-color: #ae80e5;
+    -webkit-box-shadow: 3px 5px 5px #4acbab;
+            box-shadow: 3px 5px 5px #4acbab;
+  }
+}
+@keyframes btn-move {
+  0% {
+    background-color: #9356dc;
+  }
+  100% {
+    background-color: #ae80e5;
+    -webkit-box-shadow: 3px 5px 5px #4acbab;
+            box-shadow: 3px 5px 5px #4acbab;
+  }
+}
+
 /*     check annex__card     */
 @-webkit-keyframes price-move {
   0% {
@@ -347,28 +369,6 @@ h3 {
           animation: btn-move 350ms forwards;
 }
 
-@-webkit-keyframes btn-move {
-  0% {
-    background-color: #9356dc;
-  }
-  100% {
-    background-color: #ae80e5;
-    -webkit-box-shadow: 3px 5px 5px #4acbab;
-            box-shadow: 3px 5px 5px #4acbab;
-  }
-}
-
-@keyframes btn-move {
-  0% {
-    background-color: #9356dc;
-  }
-  100% {
-    background-color: #ae80e5;
-    -webkit-box-shadow: 3px 5px 5px #4acbab;
-            box-shadow: 3px 5px 5px #4acbab;
-  }
-}
-
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,6 +450,20 @@ h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+}
+
+.annex__card:active, .annex__card:hover {
+  cursor: pointer;
+}
+
+.annex__card:active > .price, .annex__card:hover > .price {
+  -webkit-animation: price-move 350ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+          animation: price-move 350ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+}
+
+.annex__card:active .check > i, .annex__card:hover .check > i {
+  -webkit-animation: rotate 350ms 200ms;
+          animation: rotate 350ms 200ms;
 }
 
 .annex__card .annex__card__content {
@@ -591,17 +605,17 @@ header {
   margin-bottom: 1rem;
 }
 
-.logo {
-  width: 50%;
-  padding-top: 10px;
-}
-
 header a {
   position: absolute;
   left: 0.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.logo {
+  width: 50%;
+  padding-top: 10px;
 }
 
 .nav__location {
@@ -745,14 +759,4 @@ header a {
 .annex__main__body section h2 .underline {
   border-bottom: 2px solid #99e2d0;
   width: 45px;
-}
-
-.annex__card:active > .price, .annex__card:hover > .price {
-  -webkit-animation: price-move 350ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
-          animation: price-move 350ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
-}
-
-.annex__card:active .check > i, .annex__card:hover .check > i {
-  -webkit-animation: rotate 350ms 200ms;
-          animation: rotate 350ms 200ms;
 }

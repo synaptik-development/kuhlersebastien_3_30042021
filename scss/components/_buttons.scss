@@ -14,18 +14,3 @@
         animation: btn-move 350ms forwards;
     }
 }
-
-@keyframes btn-move{
-    0%{
-        background-color: $color-primary;
-    }
-    100%{
-        background-color: lighten($color-primary, 10%);
-        box-shadow: 3px 5px 5px darken($color-tertiary, 20%);
-    }
-}
-
-
-
-
-

@@ -3,6 +3,11 @@ header{
     justify-content: center;
     position: relative;
     margin-bottom: 1rem;
+    a{
+        position: absolute;
+        left: 0.5rem;
+        align-self: center;
+    }
 }
 
 .logo{
@@ -10,9 +15,4 @@ header{
     padding-top: 10px;
 }
 
-header a{
-    position: absolute;
-    left: 0.5rem;
-    align-self: center;
-}
 
