@@ -1,10 +1,98 @@
 .card{
-    @include card;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    @include box-shadow;
+    width: fit-content;
+    position: relative;
+    @include media-sm{
+        margin-right: 0;
+    }
+    &--new{
+        &::after{
+            content: "nouveau";
+            position: absolute;
+            top: 0.8rem;
+            right: 0.5rem;
+            font-size: 0.8rem;
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 60%);
+            border: solid none;
+            padding: 0.3rem;
+            box-shadow: 1px 3px 3px darken($color-tertiary, 50%);
+        }
+    }
+    img{
+        width: 250px;
+        @include media-sm{
+            width: 100%;
+        }
+    }
+    figcaption{
+        display: flex;
+        justify-content: space-between;
+        line-height: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        flex-wrap: wrap;
+        i{
+            align-self: center;
+        }
+    }
 }
 
-.annex__card{
-    @include annex__card;
+/*     cartes pages annex     */
+.annex__card {
+    background-color: white;
+    display: flex;
+    height: 70px;
+    position: relative;
+    @include box-shadow;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    .annex__card__content{
+        margin-left: 1rem;
+        margin-top: -0.4rem;
+        display: block;
+        width: 500px;
+        padding-right: 90px;
+        overflow: hidden;
+        h3, p{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .price{
+        position: absolute;
+        align-self: flex-end;
+        display: flex;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(60px);
+        .check{
+            display: block;
+            width: 60px;
+            background-color: #99e2d0;
+            border-radius: 0 1rem 1rem 0;
+            color: white;
+            i{
+                margin-top: 50%;
+                margin-left: 35%;
+            }
+        }
+        p{
+            font-weight: bold;
+            align-self: flex-end;
+            margin-right: 10px;
+            margin-bottom: 0.5rem;
+        }
+    }
 }
+
 
 .main__article__card{
     @include main__article__card;
