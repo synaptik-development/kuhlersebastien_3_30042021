@@ -1,13 +1,14 @@
-.annex__main__figure{
+.annex-main__figure{
     display: flex;
     margin: 0;
+    height: 400px;
     img{
         width: 100%;
     }
 }
 
-.annex__main__body{
-    background-color: $lighten-20;
+.annex-main__body{
+    background-color: $color-background;
     border-radius: 2rem 2rem 0 0;
     padding: 1rem;
     position: relative;
@@ -15,22 +16,22 @@
     margin-bottom: -6rem;
     display: flex;
     flex-direction: column;
-    .btn{
-        align-self: center;
-    }
-    .annex__main__title{
+    &__title{
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        font-family: 'Shrikhand', sans-serif;
         i{
             align-self: center;
         }
     }
+    .btn{
+        align-self: center;
+    }
     section{
         margin-bottom: 2rem;
-        h2{
-            color: darken($color-tertiary, 30%);
-            font-size: 1rem;
+        h3{
+            font-weight: lighter;
             display: flex;
             flex-direction: column;
             .underline{

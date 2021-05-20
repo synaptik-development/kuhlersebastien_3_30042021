@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez le menu qui vous convient">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -19,115 +20,113 @@
   
     <div id="main-content">
         <header>
-            <img class="logo" src="./img/ohmyfood.png" alt="logo ohmyfood"/>
+            <h1>ohmyfood</h1>
         </header>
 
-        <nav>
-            <div class="nav__location">
+        <section class="main-section">
+            <div class="main-section__location">
                 <i class="fas fa-map-marker-alt"></i>
                 Paris, Belleville
             </div>
-            <div class="nav__caption">
-                <h1>Réservez le menu qui vous convient</h1>
+            <div class="main-section__caption">
+                <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
                 <button class="btn" onclick="alert('en développement')">Explorez nos restaurants</button>
             </div>
+        </section>
+
+        <nav>
+            <ul>
+                <li>
+                    <h2>Fonctionnement</h2>
+                </li>
+                <li class="nav__btn">
+                    <p>1</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Choisissez un restaurant</span>
+                </li>
+                <li class="nav__btn">
+                    <p>2</p>
+                    <i class="fas fa-list-ul"></i>
+                    <span>Composez votre menu</span>
+                </li>
+                <li class="nav__btn">
+                    <p>3</p>
+                    <i class="fas fa-store"></i>
+                    <span>Dégustez au restaurant</span>
+                </li>
+            </ul>
         </nav>
 
-        <main>
-            <article class="main__article">
-                <ul>
-                    <li>
-                        <h2>Fonctionnement</h2>
-                    </li>
-                    <li class="main__article__card">
-                        <p>1</p>
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Choisissez un restaurant</span>
-                    </li>
-                    <li class="main__article__card">
-                        <p>2</p>
-                        <i class="fas fa-list-ul"></i>
-                        <span>Composez votre menu</span>
-                    </li>
-                    <li class="main__article__card main__article__card--modif">
-                        <p>3</p>
-                        <i class="fas fa-store"></i>
-                        <span>Dégustez au restaurant</span>
-                    </li>
-                </ul>
-            </article>
-
-            <section class="main__section">
-                <h2>Restaurants</h2>
-                <div class="main__section--cards">
+        <main class="index-main">
+            <h2>Restaurants</h2>
+            <div class="index-main__cards">
+                <article class="card card--new">
                     <a href="./la_palette_du_gout.html">
-                    <figure class="card card--new">
                         <img src="./img/jay-wennington.jpg" alt="plat de la palette du goût"/>
-                        <figcaption>
-                            <div>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
-                            </div>
-                            <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
-                        </figcaption>
-                    </figure>
                     </a>
+                    <div class="card__caption">
+                        <div>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
+                    </div>
+                </article>
+                <article class="card card--new">
                     <a href="./la_note_enchantee.html">
-                    <figure class="card card--new">
                         <img src="./img/stil.jpg" alt="plat de la note enchantée"/>
-                        <figcaption>
-                            <div>
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                            </div>
-                            <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
-                        </figcaption>
-                    </figure>
                     </a>
+                    <div class="card__caption">
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
+                    </div>
+                </article>
+                <article class="card">
                     <a href="./a_la_francaise.html">
-                    <figure class="card">
                         <img src="./img/toa-heftiba.jpg" alt="plat de chez à la française"/>
-                        <figcaption>
-                            <div>
-                                <h3>À la française</h3>
-                                <p>Cité rouge</p>
-                            </div>
-                            <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
-                        </figcaption>
-                    </figure>
                     </a>
+                    <div class="card__caption">
+                        <div>
+                            <h3>À la française</h3>
+                            <p>Cité rouge</p>
+                        </div>
+                        <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
+                    </div>
+                </article>
+                <article class="card">
                     <a href="./le_delice_des_sens.html">
-                    <figure class="card">
                         <img src="./img/louis-hansel.jpg" alt="plat de chez le délice des sens"/>
-                        <figcaption>
-                            <div>
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                            </div>
-                            <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
-                        </figcaption>
-                    </figure>
                     </a>
-                </div>
-            </section>
+                    <div class="card__caption">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i class="far fa-heart far--1"><i class="fas fa-heart fas--1"></i></i>
+                    </div>
+                </article>
+            </div>
         </main>
 
-        <footer>
-            <ul>
-                <li class="footer__logo">
+        <footer class="footer">
+            <ul class="footer__ul">
+                <li class="footer__ul__logo">
                     ohmyfood
                 </li>
                 <li>
-                    <i class="fas fa-utensils"></i>
-                    <a href="#">Proposer un restaurant</a>
+                    <i class="fas fa-utensils footer__ul__icon"></i>
+                    <a href="#" class="footer__ul__link">Proposer un restaurant</a>
                 </li>
                 <li>
-                    <i class="fas fa-hands-helping"></i>
-                    <a href="#">Devenir partenaire</a>
+                    <i class="fas fa-hands-helping footer__ul__icon"></i>
+                    <a href="#" class="footer__ul__link">Devenir partenaire</a>
                 </li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="footer__ul__link">Mentions légales</a></li>
+                <li><a href="mailto:sebastien.kuhler@outlook.fr" class="footer__link">Contact</a></li>
             </ul>
         </footer>
     </div>

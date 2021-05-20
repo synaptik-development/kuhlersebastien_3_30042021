@@ -1,6 +1,7 @@
 .btn {
     display: block;
     color: white;
+    font-weight: bold;
     background-color: $color-primary;
     border-radius: $border;
     border: none;
@@ -12,5 +13,45 @@
     @include margin;
     &:hover{
         animation: btn-move 350ms forwards;
+    }
+}
+
+
+.nav__btn{
+    display: flex;
+    align-items: center;
+    background-color: $color-background;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    @include box-shadow;
+    width: 250px;
+    @include media-l{
+        width: 100%;
+    }
+    p{
+        margin-left: -1rem;
+        background-color: $color-primary;
+        color: white;
+        height: 1.3rem;
+        width: 1.3rem;
+        text-align: center;
+        padding: 3px 2px 0 1px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    span{
+        font-weight: bold;
+    }
+    i{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #f5edff;
+        i{
+            color: $color-primary;
+        }
     }
 }

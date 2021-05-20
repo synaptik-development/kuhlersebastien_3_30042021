@@ -1,13 +1,12 @@
 .card{
+    background-color: white;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     @include box-shadow;
     width: fit-content;
     position: relative;
-    @include media-sm{
-        margin-right: 0;
-    }
+    margin-bottom: 1rem;
     &--new{
         &::after{
             content: "nouveau";
@@ -23,12 +22,9 @@
         }
     }
     img{
-        width: 250px;
-        @include media-sm{
-            width: 100%;
-        }
+        @include media-img;
     }
-    figcaption{
+    &__caption{
         display: flex;
         justify-content: space-between;
         line-height: 0.5rem;
@@ -42,38 +38,44 @@
 }
 
 /*     cartes pages annex     */
-.annex__card {
+.annex-card {
     background-color: white;
     display: flex;
-    height: 70px;
     position: relative;
     @include box-shadow;
     border-radius: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     overflow: hidden;
+    animation: annex-card-move duration timing-function delay iteration-count direction fill-mode;
     &:active, &:hover{
         cursor: pointer;
         &>.price{
             animation: price-move 350ms cubic-bezier(.32, 0, .07, 1) forwards;
         }
-        .check{
+        .price__check{
             &>i{
                 animation: rotate 350ms 200ms;
             }
         }
     }
-    .annex__card__content{
-        margin-left: 1rem;
-        margin-top: -0.4rem;
+    &__content{
         display: block;
-        width: 500px;
-        padding-right: 90px;
         overflow: hidden;
-        h3, p{
+        margin-left: 0.5rem;
+        h4{
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            margin-top: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+        p{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0.8rem;
+            margin-top: 0.3rem;
         }
     }
     .price{
@@ -83,30 +85,27 @@
         right: 0;
         top: 0;
         bottom: 0;
-        transform: translateX(60px);
-        .check{
+        transform: translateX(70px);
+        &__check{
             display: block;
-            width: 60px;
+            width: 70px;
             background-color: #99e2d0;
             border-radius: 0 1rem 1rem 0;
             color: white;
             i{
-                margin-top: 50%;
-                margin-left: 35%;
+                margin-top: 40%;
+                margin-left: 40%;
             }
         }
         p{
             font-weight: bold;
             align-self: flex-end;
             margin-right: 10px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
     }
 }
 
-.main__article__card{
-    @include main__article__card;
-}
 
 
 
