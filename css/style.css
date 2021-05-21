@@ -767,17 +767,11 @@ nav ul {
       align-self: center;
 }
 
-.annex-main__body .btn {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.annex-main__body section {
+.annex-main__body__section {
   margin-bottom: 2rem;
 }
 
-.annex-main__body section h3 {
+.annex-main__body__section h3 {
   font-weight: lighter;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -788,7 +782,13 @@ nav ul {
           flex-direction: column;
 }
 
-.annex-main__body section h3 .underline {
+.annex-main__body__section h3 .underline {
   border-bottom: 2px solid #99e2d0;
   width: 45px;
+}
+
+.annex-main__body .btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
