@@ -642,7 +642,7 @@ header a {
   padding-top: 10px;
 }
 
-.main-section__location {
+.index-section__location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,11 +653,11 @@ header a {
   padding: 1rem;
 }
 
-.main-section__location i {
+.index-section__location i {
   margin-right: 1rem;
 }
 
-.main-section__caption {
+.index-section__caption {
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
