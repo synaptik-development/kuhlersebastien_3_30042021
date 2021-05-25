@@ -45,12 +45,14 @@ img{
 
 .far--1{
     position: relative;
+    overflow: hidden;
     .fas--1{
         position: absolute;
         overflow: hidden;
         top: 0;
         left: 0;
-        color: $color-primary;
+        background: linear-gradient(#9356dc, #ff79da );
+        color: transparent;
         opacity: 0;
         &:active, &:hover{
             cursor: pointer;
@@ -58,7 +60,10 @@ img{
             transition: opacity 350ms;
         }
     }
+    
 }
+
+
 
 
 

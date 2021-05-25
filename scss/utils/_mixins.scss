@@ -4,7 +4,7 @@
 }
 
 @mixin box-shadow{
-    box-shadow: 3px 5px 5px $color-tertiary;
+    box-shadow: 3px 5px 5px rgb(0, 0, 0, 20%);
     }
 
     /*     loader     */

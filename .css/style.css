@@ -177,15 +177,13 @@ img {
 
 .far--1 {
   position: relative;
-  overflow: hidden;
 }
 .far--1 .fas--1 {
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
-  background: linear-gradient(#9356dc, #ff79da);
-  color: transparent;
+  color: #9356dc;
   opacity: 0;
 }
 .far--1 .fas--1:active, .far--1 .fas--1:hover {
@@ -225,14 +223,14 @@ p {
   display: block;
   color: white;
   font-weight: bold;
-  background: linear-gradient(172deg, #ff79da 0%, #9356dc 78%);
+  background-color: #9356dc;
   border-radius: 15rem;
   border: none;
   padding: 0.8rem 2rem 0.8rem 2rem;
   width: fit-content;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 5px #99e2d0;
   margin-right: auto;
   margin-left: auto;
 }
@@ -247,7 +245,7 @@ p {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 1rem;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 5px #99e2d0;
   width: 250px;
 }
 @media screen and (max-width: 1250px) {
@@ -286,7 +284,7 @@ p {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 5px #99e2d0;
   width: fit-content;
   position: relative;
   margin-bottom: 1rem;
@@ -337,13 +335,15 @@ p {
 
 /*     cartes pages annex     */
 .annex-card {
-  display: block;
+  background-color: white;
+  display: flex;
   position: relative;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 5px #99e2d0;
   border-radius: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  animation: annex-card-move duration timing-function delay iteration-count direction fill-mode;
 }
 .annex-card:active, .annex-card:hover {
   cursor: pointer;
@@ -355,19 +355,27 @@ p {
   animation: rotate 350ms 200ms;
 }
 .annex-card__content {
-  margin-left: 0.5rem;
-}
-.annex-card__content h4, .annex-card__content p {
-  width: 60%;
   display: block;
   overflow: hidden;
+  margin-left: 0.5rem;
+}
+.annex-card__content h4 {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+.annex-card__content p {
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0.8rem;
   margin-top: 0.3rem;
 }
 .annex-card .price {
   position: absolute;
+  align-self: flex-end;
   display: flex;
   right: 0;
   top: 0;
@@ -375,6 +383,7 @@ p {
   transform: translateX(70px);
 }
 .annex-card .price__check {
+  display: block;
   width: 70px;
   background-color: #99e2d0;
   border-radius: 0 1rem 1rem 0;

@@ -1,0 +1,19 @@
+{
+  "name": "kuhlersebastien_3_30042021",
+  "version": "1.0.0",
+  "description": "implémentation en mobile first du site ohmyfood, site de réservation et de composition de menus gastronomiques.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synaptik-development/kuhlersebastien_3_30042021.git"
+  },
+  "author": "synaptik-development",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synaptik-development/kuhlersebastien_3_30042021/issues"
+  },
+  "homepage": "https://github.com/synaptik-development/kuhlersebastien_3_30042021#readme"
+}
