@@ -26,22 +26,9 @@
 
 /*     boutons     */
 @keyframes btn-move{
-    0%{
-        background-color: $color-primary;
-    }
     100%{
-        background-color: lighten($color-primary, 10%);
-        box-shadow: 3px 5px 5px darken($color-tertiary, 20%);
-    }
-}
-
-/*     check annex__card     */
-@keyframes price-move{
-    0%{
-        transform: translateX(60px);
-    }
-    100%{
-        transform: translateX(0);
+        background: linear-gradient(172deg, #d980e0 0%, #c67ae0 78%);
+        box-shadow: 3px 5px 5px #bfbfbf;
     }
 }
 
@@ -55,26 +42,6 @@
     }
 }
 
-/*     annex__card     */
-@keyframes annex-card-move{
-    0%{
-        transform: translateY(9999px);
-    }
-    30%{
-        transform: translateY(100px);
-    }
-    50%{
-        transform: translateY(70px);
-    }
-    65%{
-        transform: translateY(40px);
-    }
-    80%{
-        transform: translateY(25px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+
 
 

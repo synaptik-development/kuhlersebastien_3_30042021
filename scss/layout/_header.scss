@@ -2,7 +2,9 @@ header{
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    @include box-shadow;
     h1{
         font-size: 200%;
         margin: 0;
@@ -14,9 +16,6 @@ header{
     }
 }
 
-.logo{
-    width: 50%;
-    padding-top: 10px;
-}
+
 
 

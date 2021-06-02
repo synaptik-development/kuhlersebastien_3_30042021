@@ -24,21 +24,9 @@
 }
 /*     boutons     */
 @keyframes btn-move {
-  0% {
-    background-color: #9356dc;
-  }
   100% {
-    background-color: #ae80e5;
-    box-shadow: 3px 5px 5px #4acbab;
-  }
-}
-/*     check annex__card     */
-@keyframes price-move {
-  0% {
-    transform: translateX(60px);
-  }
-  100% {
-    transform: translateX(0);
+    background: linear-gradient(172deg, #d980e0 0%, #c67ae0 78%);
+    box-shadow: 3px 5px 5px #bfbfbf;
   }
 }
 /*     icon check     */
@@ -48,27 +36,6 @@
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-/*     annex__card     */
-@keyframes annex-card-move {
-  0% {
-    transform: translateY(9999px);
-  }
-  30% {
-    transform: translateY(100px);
-  }
-  50% {
-    transform: translateY(70px);
-  }
-  65% {
-    transform: translateY(40px);
-  }
-  80% {
-    transform: translateY(25px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 /*     annex__card-move     */
@@ -124,6 +91,10 @@ a :hover {
   cursor: pointer;
 }
 
+body {
+  margin: 0;
+}
+
 .loader {
   animation: wipe-off 350ms 2650ms both;
 }
@@ -160,7 +131,6 @@ a :hover {
 #main-content {
   display: flex;
   flex-direction: column;
-  margin: auto;
   opacity: 1;
   animation: reveal 1500ms 2650ms both;
 }
@@ -170,22 +140,27 @@ img {
   width: 100%;
 }
 
-.far {
-  align-self: center;
-  transform: scale(1.5);
-}
-
 .far--1 {
   position: relative;
-  overflow: hidden;
+  font-size: 27px;
+}
+.far--1:active, .far--1:hover {
+  cursor: pointer;
+  color: transparent;
+  transition: color 350ms;
 }
 .far--1 .fas--1 {
+  font-size: 27px;
   position: absolute;
-  overflow: hidden;
   top: 0;
   left: 0;
-  background: linear-gradient(#9356dc, #ff79da);
-  color: transparent;
+  bottom: 0;
+  right: 0;
+  color: #9c47fc;
+  display: block;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 .far--1 .fas--1:active, .far--1 .fas--1:hover {
@@ -196,7 +171,8 @@ img {
 
 h1 {
   font-family: "Shrikhand", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1.7rem;
 }
 
 * {
@@ -208,7 +184,6 @@ body {
 }
 
 h2 {
-  font-weight: bold;
   font-size: 1.5rem;
 }
 
@@ -224,19 +199,19 @@ p {
 .btn {
   display: block;
   color: white;
-  font-weight: bold;
-  background: linear-gradient(172deg, #ff79da 0%, #9356dc 78%);
+  background: linear-gradient(172deg, #d26ada 0%, #bc64dc 78%);
   border-radius: 15rem;
   border: none;
   padding: 0.8rem 2rem 0.8rem 2rem;
   width: fit-content;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px #c9c9c9;
   margin-right: auto;
   margin-left: auto;
 }
 .btn:hover {
+  cursor: pointer;
   animation: btn-move 350ms forwards;
 }
 
@@ -303,9 +278,9 @@ p {
   padding: 0.3rem;
   box-shadow: 1px 3px 3px #1b6150;
 }
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 2580px) {
   .card img {
-    width: 400px;
+    width: 600px;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -337,58 +312,51 @@ p {
 
 /*     cartes pages annex     */
 .annex-card {
-  display: block;
-  position: relative;
+  background-color: white;
+  display: flex;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  margin: 0.5rem;
   overflow: hidden;
+}
+.annex-card__txt {
+  width: 50%;
+  line-height: 1.5rem;
+  flex-grow: 1;
+  margin: 0.6rem 0 0.6rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.annex-card__price {
+  align-self: flex-end;
+  font-weight: bold;
+  align-self: flex-end;
+  padding: 0 0.8rem 0.8rem 0;
+}
+.annex-card__check {
+  width: 0;
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.annex-card__check i {
+  visibility: hidden;
 }
 .annex-card:active, .annex-card:hover {
   cursor: pointer;
 }
-.annex-card:active > .price, .annex-card:hover > .price {
-  animation: price-move 350ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+.annex-card:active > .annex-card__check, .annex-card:hover > .annex-card__check {
+  width: 50px;
+  transition: width 350ms ease-in-out;
 }
-.annex-card:active .price__check > i, .annex-card:hover .price__check > i {
+.annex-card:active > .annex-card__check i, .annex-card:hover > .annex-card__check i {
+  visibility: visible;
   animation: rotate 350ms 200ms;
-}
-.annex-card__content {
-  margin-left: 0.5rem;
-}
-.annex-card__content h4, .annex-card__content p {
-  width: 60%;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: 0.8rem;
-  margin-top: 0.3rem;
-}
-.annex-card .price {
-  position: absolute;
-  display: flex;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transform: translateX(70px);
-}
-.annex-card .price__check {
-  width: 70px;
-  background-color: #99e2d0;
-  border-radius: 0 1rem 1rem 0;
-  color: white;
-}
-.annex-card .price__check i {
-  margin-top: 40%;
-  margin-left: 40%;
-}
-.annex-card .price p {
-  font-weight: bold;
-  align-self: flex-end;
-  margin-right: 10px;
-  margin-bottom: 0.8rem;
 }
 
 .footer {
@@ -415,7 +383,9 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 header h1 {
   font-size: 200%;
@@ -425,11 +395,6 @@ header a {
   position: absolute;
   left: 0.5rem;
   align-self: center;
-}
-
-.logo {
-  width: 50%;
-  padding-top: 10px;
 }
 
 .index-section__location {
@@ -463,10 +428,11 @@ nav ul {
 .index-main {
   padding: 1rem;
   background-color: #f6f6f6;
+  height: 80%;
 }
 .index-main__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1250px) {
@@ -482,46 +448,64 @@ nav ul {
   border-radius: 1rem 1rem 0 0;
 }
 
-.annex-main__figure {
+.annex-figure {
   display: flex;
   margin: 0;
   height: 400px;
 }
-.annex-main__figure img {
+.annex-figure img {
   width: 100%;
 }
-.annex-main__body {
+
+.annex-main {
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
-  padding: 1rem;
   position: relative;
   top: -6rem;
   margin-bottom: -6rem;
   display: flex;
   flex-direction: column;
 }
-.annex-main__body__title {
+.annex-main__title {
+  padding-left: 1rem;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-family: "Shrikhand", sans-serif;
 }
-.annex-main__body__title i {
+.annex-main__title h2 {
+  font-size: 1.7rem;
+}
+.annex-main__title i {
   align-self: center;
+  padding-left: 40px;
 }
-.annex-main__body__section {
-  margin-bottom: 2rem;
+.annex-main__content {
+  padding: 0 1rem 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
 }
-.annex-main__body__section h3 {
+@media screen and (max-width: 880px) {
+  .annex-main__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.annex-main__section {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.annex-main__section h3 {
   font-weight: lighter;
   display: flex;
   flex-direction: column;
 }
-.annex-main__body__section h3 .underline {
+.annex-main__section h3 .underline {
   border-bottom: 2px solid #99e2d0;
   width: 45px;
 }
-.annex-main__body .btn {
+.annex-main .btn {
   align-self: center;
 }
 

@@ -10,6 +10,10 @@ a{
     }
 }
 
+body{
+    margin: 0;
+}
+
 .loader{
     animation: wipe-off 350ms $delay both;
     .spin-xl{
@@ -26,7 +30,6 @@ a{
 #main-content{
     display: flex;
     flex-direction: column;
-    margin: auto;
     opacity: 1;
     animation: reveal 1500ms $delay both;
 }
@@ -37,22 +40,23 @@ img{
     width: 100%;
 }
 
-
-.far{
-    align-self: center;
-    transform: scale(1.5);
-}
-
 .far--1{
     position: relative;
-    overflow: hidden;
-    .fas--1{
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        background: linear-gradient(#9356dc, #ff79da );
+    font-size: 27px;
+    &:active, &:hover{
+        cursor: pointer;
         color: transparent;
+        transition: color 350ms;
+    }
+    .fas--1{
+        font-size: 27px;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        color: #9c47fc;
+        display: block;
+        background: -webkit-linear-gradient(#9356dc, #ff79da );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         opacity: 0;
         &:active, &:hover{
             cursor: pointer;

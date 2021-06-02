@@ -32,9 +32,10 @@ nav{
 .index-main{
     padding: $padding;
     background-color: $color-background;
+    height: 80%;
     &__cards{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         @include media-l{
             justify-content: space-around;

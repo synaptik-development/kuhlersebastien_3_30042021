@@ -1,17 +1,17 @@
 .btn {
     display: block;
     color: white;
-    font-weight: bold;
-    background: linear-gradient(172deg, #ff79da  0%,  #9356dc 78%);
+    background: linear-gradient(172deg, #d26ada  0%,  #bc64dc 78%);
     border-radius: $border;
     border: none;
     padding: 0.8rem 2rem 0.8rem 2rem;
     width: fit-content;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    @include box-shadow;
+    box-shadow: 3px 3px 3px #c9c9c9;
     @include margin;
     &:hover{
+        cursor: pointer;
         animation: btn-move 350ms forwards;
     }
 }
