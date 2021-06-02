@@ -38,6 +38,27 @@
     transform: rotate(360deg);
   }
 }
+/*     annex__card     */
+@keyframes annex-card-move {
+  0% {
+    transform: translateY(9999px);
+  }
+  30% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(70px);
+  }
+  65% {
+    transform: translateY(40px);
+  }
+  80% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*     annex__card-move     */
 .annex-card--1 {
   animation: annex-card-move 500ms 350ms ease-out both;
