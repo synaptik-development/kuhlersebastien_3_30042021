@@ -350,6 +350,9 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.annex-card__txt h4 {
+  margin: 0;
+}
 .annex-card__price {
   align-self: flex-end;
   font-weight: bold;

@@ -170,11 +170,6 @@ img {
   width: 100%;
 }
 
-.far {
-  align-self: center;
-  transform: scale(1.5);
-}
-
 .far--1 {
   position: relative;
 }

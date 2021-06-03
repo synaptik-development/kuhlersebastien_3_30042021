@@ -47,6 +47,9 @@
     margin: .5rem;
     overflow: hidden;
     &__txt{
+        h4{
+            margin: 0;
+        }
         width: 50%;
         line-height: 1.5rem;
         flex-grow: 1;
