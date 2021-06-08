@@ -42,6 +42,7 @@
 @keyframes annex-card-move {
   0% {
     transform: translateY(9999px);
+    opacity: 0;
   }
   30% {
     transform: translateY(100px);
@@ -57,47 +58,48 @@
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 /*     annex__card-move     */
 .annex-card--1 {
-  animation: annex-card-move 500ms 350ms ease-out both;
+  animation: annex-card-move 1s 350ms ease-in both;
 }
 
 .annex-card--2 {
-  animation: annex-card-move 500ms 700ms ease-out both;
+  animation: annex-card-move 1s 700ms ease-in both;
 }
 
 .annex-card--3 {
-  animation: annex-card-move 500ms 1050ms ease-out both;
+  animation: annex-card-move 1s 1050ms ease-in both;
 }
 
 .annex-card--4 {
-  animation: annex-card-move 500ms 1400ms ease-out both;
+  animation: annex-card-move 1s 1400ms ease-in both;
 }
 
 .annex-card--5 {
-  animation: annex-card-move 500ms 1750ms ease-out both;
+  animation: annex-card-move 1s 1750ms ease-in both;
 }
 
 .annex-card--6 {
-  animation: annex-card-move 500ms 2100ms ease-out both;
+  animation: annex-card-move 1s 2100ms ease-in both;
 }
 
 .annex-card--7 {
-  animation: annex-card-move 500ms 2450ms ease-out both;
+  animation: annex-card-move 1s 2450ms ease-in both;
 }
 
 .annex-card--8 {
-  animation: annex-card-move 500ms 2800ms ease-out both;
+  animation: annex-card-move 1s 2800ms ease-in both;
 }
 
 .annex-card--9 {
-  animation: annex-card-move 500ms 3150ms ease-out both;
+  animation: annex-card-move 1s 3150ms ease-in both;
 }
 
 .annex-card--10 {
-  animation: annex-card-move 500ms 3500ms ease-out both;
+  animation: annex-card-move 1s 3500ms ease-in both;
 }
 
 * {
@@ -117,7 +119,7 @@ body {
 }
 
 .loader {
-  animation: wipe-off 350ms 2650ms both;
+  animation: wipe-off 900ms 1200ms both;
 }
 .loader .spin-xl {
   width: 200px;
@@ -153,7 +155,7 @@ body {
   display: flex;
   flex-direction: column;
   opacity: 1;
-  animation: reveal 1500ms 2650ms both;
+  animation: reveal 1500ms 1200ms both;
 }
 
 img {
@@ -352,6 +354,9 @@ p {
 }
 .annex-card__txt h4 {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .annex-card__price {
   align-self: flex-end;
@@ -381,6 +386,7 @@ p {
 .annex-card:active > .annex-card__check i, .annex-card:hover > .annex-card__check i {
   visibility: visible;
   animation: rotate 350ms 200ms;
+  font-size: 20px;
 }
 
 .footer {

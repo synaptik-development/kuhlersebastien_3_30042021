@@ -49,6 +49,9 @@
     &__txt{
         h4{
             margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         width: 50%;
         line-height: 1.5rem;
@@ -84,6 +87,7 @@
             i{
                 visibility: visible;
                 animation: rotate 350ms 200ms;
+                font-size: 20px;
             }
         }
     }

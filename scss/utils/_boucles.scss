@@ -1,6 +1,6 @@
 /*     annex__card-move     */
 @for $i from 1 through 10{
     .annex-card--#{$i} {
-        animation: annex-card-move 500ms 350ms*$i ease-out both;
+        animation: annex-card-move 1s 350ms*$i ease-in both;
     }
 }

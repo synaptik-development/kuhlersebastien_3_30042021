@@ -15,7 +15,7 @@ body{
 }
 
 .loader{
-    animation: wipe-off 350ms $delay both;
+    animation: wipe-off 900ms $delay both;
     .spin-xl{
         @include loader;
         border-right: none;

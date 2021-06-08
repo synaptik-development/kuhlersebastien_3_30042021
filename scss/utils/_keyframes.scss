@@ -46,6 +46,7 @@
 @keyframes annex-card-move{
     0%{
         transform: translateY(9999px);
+        opacity: 0;
     }
     30%{
         transform: translateY(100px);
@@ -61,6 +62,7 @@
     }
     100%{
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
