@@ -115,7 +115,9 @@ a :hover {
 }
 
 body {
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 2500px;
 }
 
 .loader {
@@ -500,7 +502,7 @@ nav ul {
   padding-left: 1rem;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: "Shrikhand", sans-serif;
 }
 .annex-main__title h2 {
@@ -508,7 +510,7 @@ nav ul {
 }
 .annex-main__title i {
   align-self: center;
-  padding-left: 40px;
+  margin-right: 20px;
 }
 .annex-main__content {
   padding: 0 1rem 0 1rem;

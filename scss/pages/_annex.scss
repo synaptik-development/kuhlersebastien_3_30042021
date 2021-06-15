@@ -19,14 +19,14 @@
         padding-left: 1rem;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: flex-end;
+        justify-content: space-between;
         font-family: 'Shrikhand', sans-serif;
         h2{
             font-size: 1.7rem;
         }
         i{
             align-self: center;
-            padding-left: 40px;
+            margin-right: 20px;
         }
     }
     &__content{
